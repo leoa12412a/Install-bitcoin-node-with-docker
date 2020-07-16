@@ -76,7 +76,7 @@ kylemanna/bitcoind;
 輸入以下查詢資訊指令已檢測是否安裝成功
 
 ```
-docker {CONTAINER ID} e8646e8 bitcoin-cli getblockchaininfo
+docker {CONTAINER ID} bitcoin-cli getblockchaininfo
 ```
 
 安裝成功後可以在<a href="https://bitnodes.io/#join-the-network">官網</a>上查到是否成功與其他節點連線
