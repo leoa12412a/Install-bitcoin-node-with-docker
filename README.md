@@ -98,3 +98,7 @@ docker exec {CONTAINER ID} bitcoind -conf=/bitcoin/.bitcoin/bitcoin.conf -rescan
 
 ![image](img/check-btc.PNG)<br />
 
+
+## 開始使用
+
+關於bitcoin-cli的指令可以查看<a href="https://mistydew.github.io/blog/2018/05/bitcoin-cli-commands.html?fbclid=IwAR05nvAY7xFpCQO3IA1GQxvefWY02Ki4obfkMixWjEgY7x-7kegGrudrfzU">這裡</a>的中文指令介紹
