@@ -1,4 +1,6 @@
-# 使用Docker架設Bitcoin Full Node
+# Bitcoin Full Node
+
+分為直接安裝以及使用docker安裝
 
 ## 直接安裝
 
