@@ -66,7 +66,7 @@ bitcoin-cli stop
 
 ```
 docker volume create --name=bitcoind-data;
-docker run -v /home/bitcoin/bitcoind-data:/bitcoin/bitcoind-data --name=bitcoind-node -d \
+docker run -v /home/bitcoin/bitcoind-data:/bitcoin/.bitcoin/bitcoind-data --name=bitcoind-node -d \
 -p 8333:8333 \
 -p 127.0.0.1:8332:8332 \
 -v /home/bitcoin:/bitcoin/.bitcoin \
@@ -78,6 +78,13 @@ kylemanna/bitcoind;
 ```
 docker {CONTAINER ID} bitcoin-cli getblockchaininfo
 ```
+
+在/home/bitcoin/bitcoin.conf配置設定檔以及儲存路徑
+```
+conf=/bitcoin/.bitcoin/bitcoin.conf
+datadir=/bitcoin/.bitcoin/bitcoind-data
+```
+
 
 安裝成功後可以在<a href="https://bitnodes.io/#join-the-network">官網</a>上查到是否成功與其他節點連線
 
