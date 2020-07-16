@@ -1,0 +1,57 @@
+安裝教學
+https://bitcoin.org/en/full-node
+
+1. yum install -y autoconf
+
+2. mkdir bitcoin
+
+3. cd bitcoin
+
+4. wget https://bitcoin.org/bin/bitcoin-core-0.18.1/bitcoin-0.18.1-x86_64-linux-gnu.tar.gz
+
+5. tar xzf bitcoin-0.18.1-x86_64-linux-gnu.tar.gz
+
+6. sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.1/bin/*
+
+安裝完成
+
+
+先創建一個存放data的目錄
+mkdir bitcoin-data
+
+設置bitcoin.conf
+vi bitcoin.conf
+
+內文
+	conf=/home/bitcoin/bitcoin.conf
+	datadir=/home/bitcoin/bitcoin-data
+:wq!  儲存離開
+
+啟動bitcoin core
+bitcoind -conf=/home/bitcoin/bitcoin.conf -daemon
+
+重新認證
+bitcoind -conf=/home/bitcoin/bitcoin.conf -rescan
+
+
+
+開啟bitcoin core
+bitcoind -daemon
+
+
+get資料
+bitcoin-cli getblockchaininfo
+
+	**詳細api內容**
+	https://bitcoin.org/en/developer-reference#rpc-quick-reference
+
+關閉bitcoin core
+bitcoin-cli stop
+
+
+
+安裝參考網址
+https://bitzuma.com/posts/moving-the-bitcoin-core-data-directory/?fbclid=IwAR2fWJQDgyEvLSPARCko_S900GEoeQNppYYUY2Pag1P-CLu9LBlc3wC-5D8
+https://github.com/bitcoin/bitcoin/issues/15745
+https://github.com/bitcoin/bitcoin/blob/master/share/examples/bitcoin.conf
+https://www.chainnode.com/question/23247
