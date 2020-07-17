@@ -98,6 +98,9 @@ docker exec {CONTAINER ID} bitcoind -conf=/bitcoin/.bitcoin/bitcoin.conf -rescan
 
 ![image](img/check-btc.PNG)<br />
 
+在網站上也可以搜尋到自己的IP(需要一段時間)，且在上面也可以查詢到下載進度和一些下載的資訊
+
+![image](img/1.PNG)<br />
 
 ## 開始使用
 
