@@ -64,13 +64,14 @@ bitcoin-cli stop
 
 安裝好docker(<a href="https://github.com/leoa12412a/Docker">方法</a>)後輸入以下指令，在/home/bitcoin裡面可以找到bitcoin.conf
 
-<a href="https://github.com/kylemanna/docker-bitcoind">來源</a>
+<a href="https://github.com/kylemanna/docker-bitcoind">來源</a>，預設Wallet是disable的在指令內加入-e DISABLEWALLET=0 \就可以使用wallet的語法，其他設定也可以參考<a href="https://github.com/kylemanna/docker-bitcoind/blob/master/docs/config.md">bitcoind config tuning</a>
 
 ```
 docker volume create --name=bitcoind-data;
 docker run --name=bitcoind-node -d \
 -p 8333:8333 \
 -p 127.0.0.1:8332:8332 \
+-e DISABLEWALLET=0 \
 -v /home/bitcoin:/bitcoin/.bitcoin \
 kylemanna/bitcoind;
 ```
