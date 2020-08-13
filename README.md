@@ -105,6 +105,16 @@ docker exec {CONTAINER ID} bitcoind -conf=/bitcoin/.bitcoin/bitcoin.conf -rescan
 
 ## 開始使用
 
+### 冷錢包 和 熱錢包
+錢包是儲存虛擬貨幣的地方，但嚴格來說只是儲存自己的私鑰，有了私鑰我們才能去控制區塊鏈上的虛擬貨幣，而冷熱錢包就是兩種不同儲存私鑰的方式。
+- 冷錢包
+冷錢包，其實就是離線錢包，平常不會連上網，只有需要交易的時候才會連網。傳統的方式是把私鑰手抄到紙張上，但風險就在於，一但遺失了小紙條，比特幣就再也找不回來了…這的確很可能時常發生。
+<br>
+- 熱錢包
+顧名思義是與冷錢包相反的，它是一種線上錢包（online wallet），可以儲存在手機、電腦或網頁，跟冷錢包需要花上千塊購置以及設定門檻相比，熱錢包特點是很便利也很容易取得，因為所有操作都是集中在網路上，不需要在每次交易時都大費周章地把冷錢包載體連結到網路上。
+然而，熱錢包的操作都是在連網狀態下生成錢包的地址與私鑰，當私鑰都暴露在惡意滿滿的網路上時，也意味著無時無刻都要面對駭客攻擊跟網路釣魚的風險。
+
+### 指令
 關於bitcoin-cli的指令可以查看<a href="https://mistydew.github.io/blog/2018/05/bitcoin-cli-commands.html?fbclid=IwAR05nvAY7xFpCQO3IA1GQxvefWY02Ki4obfkMixWjEgY7x-7kegGrudrfzU">這裡</a>的中文指令介紹，但是新版本的bitcoin-cli有些方法已改變或是移除，請的指令及更改請參考<a href="https://bitcoin.org/en/release/v0.17.0#label-and-account-apis-for-wallet">這裡</a>
 <br />
 以下指令示範使用docker版本執行
