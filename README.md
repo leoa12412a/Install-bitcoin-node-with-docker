@@ -116,11 +116,11 @@ docker exec {CONTAINER ID} bitcoin-cli getnewaddress
 結果 =>
 產生地址為3PDxjkhX4rqXsV66vgteAZEMfuyfuCLTSx
 ```
-[root@124-219-96-44 bitcoin]# docker exec 3afef66e211 bitcoin-cli getnewaddress
+# docker exec 3afef66e211 bitcoin-cli getnewaddress
 3PDxjkhX4rqXsV66vgteAZEMfuyfuCLTSx
 ```
 
-### 取得錢包下所有帳號
+### 查詢錢包下所有帳號
 原指令為bitcoin-cli listaccounts
 ```
 docker exec {CONTAINER ID} bitcoin-cli listlabels
@@ -128,8 +128,31 @@ docker exec {CONTAINER ID} bitcoin-cli listlabels
 結果 =>
 有一個帳號為""
 ```
-docker exec 3afef66e211 bitcoin-cli listlabels
+# docker exec 3afef66e211 bitcoin-cli listlabels
 [
   ""
 ]
+```
+### 查詢帳號下所有地址
+原指令為getaddressesbyaccount
+```
+docker exec {CONTAINER ID} bitcoin-cli getaddressesbylabel {YOUR ACCOUNT0}
+```
+結果=>
+```
+# docker exec 3afef66e211 bitcoin-cli getaddressesbylabel ""
+{
+  "35cwEv5FXxA8Vf4jM35duhXa617DgykyT3": {
+    "purpose": "receive"
+  },
+  "36tQRuANmhC4GGMcrd6hwVMR79Zige31ZM": {
+    "purpose": "receive"
+  },
+  "3P93VFdx9v4i9FwHxMD7Jwoz9ppNyv9tXz": {
+    "purpose": "receive"
+  },
+  "3PDxjkhX4rqXsV66vgteAZEMfuyfuCLTSx": {
+    "purpose": "receive"
+  }
+}
 ```
